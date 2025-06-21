@@ -6,8 +6,9 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git credentialsId: 'my-credentials-id',
-                    url: 'https://github.com/harshareddy2929/Ekart.git',
+                git credentialsId: 'git-credentials', url: 'https://github.com/harshareddy2929/Ekart.git'
+                //credentialsId: 'my-credentials-id',
+                    url: 'https://github.com/harshareddy2929/Ekart.git',//
                     branch: 'feature'
             }
                 
