@@ -4,12 +4,14 @@ pipeline {
         }
 
     stages {
-        stage('Clone') {
+        stage('Clone Reposirory') {
             steps {
                 echo 'Cloning repository...'
                 git branch: 'feature', url: 'https://github.com/harshareddy2929/Ekart.git'
+                
             }
         }
+        
 
        stage('Build') {
             steps {
