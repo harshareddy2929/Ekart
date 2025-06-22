@@ -8,13 +8,14 @@ pipeline {
                             }
                 
             }
-        }
-         stage('Build') {
+        stage('Build') {
             steps {
                 echo 'Building Java application with Maven...'
                 sh 'mvn clean package'
             }
-        }         
+        }
+        }
+                  
       post {
         success {
             echo 'Pipeline completed successfully.'
