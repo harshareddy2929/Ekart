@@ -5,8 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git credentialsId: 'git-credentials', url: 'https://github.com/harshareddy2929/Ekart.git'
-                branch: 'feature'
-            }
+                            }
                 
             }
         }
