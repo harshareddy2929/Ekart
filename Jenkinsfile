@@ -4,11 +4,11 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                url: 'https://github.com/harshareddy2929/Ekart.git'
+                git credentialsId: 'git-credentials', url: 'https://github.com/harshareddy2929/Ekart.git'
                             }
                 
             }
-        stage('Build') {
+			stage('Build') {
             steps {
                 echo 'Building Java application with Maven...'
                 sh 'mvn clean package'
