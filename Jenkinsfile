@@ -14,8 +14,7 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        }
-                  
+        }                  
       post {
         success {
             echo 'Pipeline completed successfully.'
